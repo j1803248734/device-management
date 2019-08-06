@@ -1,0 +1,27 @@
+package com.java1234.service;
+
+import java.util.List;
+
+import com.java1234.model.Equipment;
+import com.java1234.model.PageBean;
+
+public interface EquipmentService {
+
+	public boolean existEquipmentByTypeId(int typeId);
+	
+	public int count(Equipment s_equipment);
+	
+	public void add(Equipment equipment);
+	
+	public void delete(Integer id);
+	
+	public void update(Equipment equipment);
+	
+	public Equipment findById(Integer id);
+	
+	public List<Equipment> find(PageBean pageBean,Equipment s_equipment);
+	
+	public void addRepair(int id, String userMan); 
+	
+	public void updateRepair(int id, int repairId,String repairMan, boolean success);
+}
